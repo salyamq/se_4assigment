@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: AC1 rejects malformed time
+ok 1 - AC1 rejects malformed time
+  ---
+  duration_ms: 1.20114
+  type: 'test'
+  ...
+# Subtest: AC1 rejects missing time
+ok 2 - AC1 rejects missing time
+  ---
+  duration_ms: 0.214263
+  type: 'test'
+  ...
+# Subtest: AC1 rejects impossible time
+ok 3 - AC1 rejects impossible time
+  ---
+  duration_ms: 0.099069
+  type: 'test'
+  ...
+# Subtest: AC1 rejects start before fixed current time
+ok 4 - AC1 rejects start before fixed current time
+  ---
+  duration_ms: 0.10676
+  type: 'test'
+  ...
+# Subtest: AC1 accepts start at fixed current time
+ok 5 - AC1 accepts start at fixed current time
+  ---
+  duration_ms: 0.307123
+  type: 'test'
+  ...
+# Subtest: AC1 rejects equal endpoints
+ok 6 - AC1 rejects equal endpoints
+  ---
+  duration_ms: 0.246601
+  type: 'test'
+  ...
+# Subtest: AC1 rejects reversed endpoints
+ok 7 - AC1 rejects reversed endpoints
+  ---
+  duration_ms: 0.270748
+  type: 'test'
+  ...
+# Subtest: AC2 accepts exactly 120 minutes
+ok 8 - AC2 accepts exactly 120 minutes
+  ---
+  duration_ms: 0.178409
+  type: 'test'
+  ...
+# Subtest: AC2 rejects 121 minutes
+ok 9 - AC2 rejects 121 minutes
+  ---
+  duration_ms: 0.156636
+  type: 'test'
+  ...
+# Subtest: AC3 rejects a blocked room with no bookings
+ok 10 - AC3 rejects a blocked room with no bookings
+  ---
+  duration_ms: 0.327258
+  type: 'test'
+  ...
+# Subtest: AC4 allows request ending at booking start
+ok 11 - AC4 allows request ending at booking start
+  ---
+  duration_ms: 0.389788
+  type: 'test'
+  ...
+# Subtest: AC4 allows request starting at booking end
+ok 12 - AC4 allows request starting at booking end
+  ---
+  duration_ms: 0.10601
+  type: 'test'
+  ...
+# Subtest: AC4 rejects one minute overlap
+ok 13 - AC4 rejects one minute overlap
+  ---
+  duration_ms: 0.199951
+  type: 'test'
+  ...
+# Subtest: AC4 rejects identical booking
+ok 14 - AC4 rejects identical booking
+  ---
+  duration_ms: 0.267663
+  type: 'test'
+  ...
+# Subtest: AC4 rejects enclosing interval
+ok 15 - AC4 rejects enclosing interval
+  ---
+  duration_ms: 0.091067
+  type: 'test'
+  ...
+# Subtest: AC5 preserves frozen unsorted booking data
+ok 16 - AC5 preserves frozen unsorted booking data
+  ---
+  duration_ms: 0.837923
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 162.295881

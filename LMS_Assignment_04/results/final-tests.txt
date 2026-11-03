@@ -1,0 +1,220 @@
+TAP version 13
+# Subtest: AC1 rejects malformed time
+ok 1 - AC1 rejects malformed time
+  ---
+  duration_ms: 1.743135
+  type: 'test'
+  ...
+# Subtest: AC1 rejects missing time
+ok 2 - AC1 rejects missing time
+  ---
+  duration_ms: 0.129675
+  type: 'test'
+  ...
+# Subtest: AC1 rejects impossible time
+ok 3 - AC1 rejects impossible time
+  ---
+  duration_ms: 0.128593
+  type: 'test'
+  ...
+# Subtest: AC1 rejects start before fixed current time
+ok 4 - AC1 rejects start before fixed current time
+  ---
+  duration_ms: 0.09906
+  type: 'test'
+  ...
+# Subtest: AC1 accepts start at fixed current time
+ok 5 - AC1 accepts start at fixed current time
+  ---
+  duration_ms: 0.130096
+  type: 'test'
+  ...
+# Subtest: AC1 rejects equal endpoints
+ok 6 - AC1 rejects equal endpoints
+  ---
+  duration_ms: 0.154343
+  type: 'test'
+  ...
+# Subtest: AC1 rejects reversed endpoints
+ok 7 - AC1 rejects reversed endpoints
+  ---
+  duration_ms: 0.120481
+  type: 'test'
+  ...
+# Subtest: AC2 accepts exactly 120 minutes
+ok 8 - AC2 accepts exactly 120 minutes
+  ---
+  duration_ms: 0.090647
+  type: 'test'
+  ...
+# Subtest: AC2 rejects 121 minutes
+ok 9 - AC2 rejects 121 minutes
+  ---
+  duration_ms: 0.103747
+  type: 'test'
+  ...
+# Subtest: AC3 rejects a blocked room with no bookings
+ok 10 - AC3 rejects a blocked room with no bookings
+  ---
+  duration_ms: 0.364018
+  type: 'test'
+  ...
+# Subtest: AC4 allows request ending at booking start
+ok 11 - AC4 allows request ending at booking start
+  ---
+  duration_ms: 0.183346
+  type: 'test'
+  ...
+# Subtest: AC4 allows request starting at booking end
+ok 12 - AC4 allows request starting at booking end
+  ---
+  duration_ms: 0.163837
+  type: 'test'
+  ...
+# Subtest: AC4 rejects one minute overlap
+ok 13 - AC4 rejects one minute overlap
+  ---
+  duration_ms: 0.120511
+  type: 'test'
+  ...
+# Subtest: AC4 rejects identical booking
+ok 14 - AC4 rejects identical booking
+  ---
+  duration_ms: 0.102174
+  type: 'test'
+  ...
+# Subtest: AC4 rejects enclosing interval
+ok 15 - AC4 rejects enclosing interval
+  ---
+  duration_ms: 0.143155
+  type: 'test'
+  ...
+# Subtest: AC5 preserves frozen unsorted booking data
+ok 16 - AC5 preserves frozen unsorted booking data
+  ---
+  duration_ms: 0.137777
+  type: 'test'
+  ...
+# Subtest: Catalog contains four distinct complete rooms
+ok 17 - Catalog contains four distinct complete rooms
+  ---
+  duration_ms: 0.323197
+  type: 'test'
+  ...
+# Subtest: F1 exact capacity is included
+ok 18 - F1 exact capacity is included
+  ---
+  duration_ms: 0.173461
+  type: 'test'
+  ...
+# Subtest: F1 insufficient capacity is excluded
+ok 19 - F1 insufficient capacity is excluded
+  ---
+  duration_ms: 0.104157
+  type: 'test'
+  ...
+# Subtest: F1 zero invalid and fractional attendee values are rejected
+ok 20 - F1 zero invalid and fractional attendee values are rejected
+  ---
+  duration_ms: 0.649298
+  type: 'test'
+  ...
+# Subtest: F2 ALL selected equipment is required
+ok 21 - F2 ALL selected equipment is required
+  ---
+  duration_ms: 0.301864
+  type: 'test'
+  ...
+# Subtest: F2 equipment combination absent from every room returns empty
+ok 22 - F2 equipment combination absent from every room returns empty
+  ---
+  duration_ms: 0.129114
+  type: 'test'
+  ...
+# Subtest: F2 no equipment requirement includes every room
+ok 23 - F2 no equipment requirement includes every room
+  ---
+  duration_ms: 0.110436
+  type: 'test'
+  ...
+# Subtest: F3 matching blocked room can be listed but never available
+ok 24 - F3 matching blocked room can be listed but never available
+  ---
+  duration_ms: 0.100411
+  type: 'test'
+  ...
+# Subtest: Filtering preserves room catalog and ordering
+ok 25 - Filtering preserves room catalog and ordering
+  ---
+  duration_ms: 0.127532
+  type: 'test'
+  ...
+# Subtest: F4 no room satisfies excessive capacity
+ok 26 - F4 no room satisfies excessive capacity
+  ---
+  duration_ms: 0.073531
+  type: 'test'
+  ...
+# Subtest: Integration F5 room switching recalculates the checked interval
+ok 27 - Integration F5 room switching recalculates the checked interval
+  ---
+  duration_ms: 0.248804
+  type: 'test'
+  ...
+# Subtest: Integration F3 switching from available to blocked removes success
+ok 28 - Integration F3 switching from available to blocked removes success
+  ---
+  duration_ms: 0.116045
+  type: 'test'
+  ...
+# Subtest: Integration F4 empty filters clear selection and availability
+ok 29 - Integration F4 empty filters clear selection and availability
+  ---
+  duration_ms: 0.174653
+  type: 'test'
+  ...
+# Subtest: Integration filtering out a room selects first match and refreshes
+ok 30 - Integration filtering out a room selects first match and refreshes
+  ---
+  duration_ms: 0.261755
+  type: 'test'
+  ...
+# Subtest: Integration resetting empty filters restores selection
+ok 31 - Integration resetting empty filters restores selection
+  ---
+  duration_ms: 0.269166
+  type: 'test'
+  ...
+# Subtest: Integration changed times replace an old success and recover
+ok 32 - Integration changed times replace an old success and recover
+  ---
+  duration_ms: 0.117968
+  type: 'test'
+  ...
+# Subtest: Integration room changes before first check preserve idle feedback
+ok 33 - Integration room changes before first check preserve idle feedback
+  ---
+  duration_ms: 0.094703
+  type: 'test'
+  ...
+# Subtest: Integration invalid attendees hide stale results then recover
+ok 34 - Integration invalid attendees hide stale results then recover
+  ---
+  duration_ms: 0.11969
+  type: 'test'
+  ...
+# Subtest: Integration cannot select a room excluded by filters
+ok 35 - Integration cannot select a room excluded by filters
+  ---
+  duration_ms: 0.107983
+  type: 'test'
+  ...
+1..35
+# tests 35
+# suites 0
+# pass 35
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 121.738554

@@ -1,0 +1,26 @@
+LMS real DOM behavior tests
+Tool: browser ES modules
+Date: 2 November 2026
+PASS Catalog renders all four rooms
+PASS Availability is rendered after submitting
+PASS F5 room switch refreshes result and room bookings
+PASS F3 blocked room never displays success
+PASS F1 F2 combined capacity and ALL equipment filters render correctly
+PASS F4 empty state clears selection and disables checking
+PASS Reset restores all room cards after no matches
+PASS Changing invalid time back to valid clears error attributes
+PASS Room keyboard focus survives the render
+Tests: 9; passed: 9; failed: 0
+
+Additional browser observations (not included in automated test count)
+Browser: Chrome via Sites local preview
+URL path: /final/
+PASS 25 attendees + Computers: only R202 is shown; its own 11:00 - 12:30 booking produces overlap.
+PASS 61 attendees: 0 of 4 rooms, explicit empty state, no selection, disabled check button.
+PASS R101 11:00 - 12:00: available. Switching to R202 updates result to overlap without re-submitting.
+URL path: /tests/ui.test.html
+PASS Narrow iframe (390px outside width, 375 CSS px document viewport): content width 375px, one workspace column (339px), no horizontal document overflow.
+PASS Keyboard Enter selects R202 and submits availability in narrow iframe; result is overlap.
+Scope: iframe layout check, not a physical mobile-device or screen-reader certification.
+PASS 25 attendees + Projector + Computers, R202 12:30 - 13:30: available, touching the existing booking endpoint.
+PASS Browser harness after renaming its script to ui-browser.mjs: 9 passed, 0 failed.
